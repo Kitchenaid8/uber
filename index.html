@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$750 Uber Eats Gift Card Reward | MealsPromo</title>
+  <meta name="description" content="Claim your $750 Uber Eats gift card reward. Enter your basic info and complete required offers to receive your reward today.">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: linear-gradient(135deg, #FFFFFF 0%, #FFFFFF50%, #FFFFFF 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 16px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Floating Dots */
+    .floating-dots {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .dot {
+      position: absolute;
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .dot-1 {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      opacity: 0.3;
+      top: 10%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .dot-2 {
+      width: 6px;
+      height: 6px;
+      background: #16a34a;
+      opacity: 0.2;
+      top: 20%;
+      right: 20%;
+      animation-delay: 1s;
+    }
+
+    .dot-3 {
+      width: 10px;
+      height: 10px;
+      background: #22c55e;
+      opacity: 0.25;
+      bottom: 30%;
+      left: 15%;
+      animation-delay: 2s;
+    }
+
+    .dot-4 {
+      width: 4px;
+      height: 4px;
+      background: #16a34a;
+      opacity: 0.35;
+      top: 60%;
+      right: 10%;
+      animation-delay: 3s;
+    }
+
+    .dot-5 {
+      width: 12px;
+      height: 12px;
+      background: #22c55e;
+      opacity: 0.15;
+      bottom: 20%;
+      right: 25%;
+      animation-delay: 4s;
+    }
+
+    .dot-6 {
+      width: 5px;
+      height: 5px;
+      background: #16a34a;
+      opacity: 0.2;
+      top: 40%;
+      left: 5%;
+      animation-delay: 2.5s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+      }
+      50% {
+        transform: translateY(-20px) scale(1.1);
+        opacity: 0.5;
+      }
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      border-radius: 12px;
+      padding: 12px 16px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 100;
+      animation: slideDown 0.3s ease-out;
+      max-width: 320px;
+    }
+
+    .toast.hidden {
+      animation: slideUp 0.3s ease-out forwards;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 0;
+      }
+    }
+
+    .toast-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .toast-content {
+      flex: 1;
+    }
+
+    .toast-name {
+      font-weight: 600;
+      color: #111827;
+      font-size: 14px;
+    }
+
+    .toast-message {
+      color: #6b7280;
+      font-size: 13px;
+    }
+
+    .toast-time {
+      color: #9ca3af;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+
+    /* Main Card */
+    .container {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 384px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      padding: 24px 32px;
+      text-align: center;
+    }
+
+    .card-header h1 {
+      color: white;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    .card-header p {
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: -4px;
+    }
+
+    .card-body {
+      padding: 32px;
+    }
+
+    .reward-amount {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .reward-amount .amount {
+      color: #22c55e;
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+    }
+
+    .reward-amount .label {
+      color: #6b7280;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* Steps */
+    .steps {
+      background: #f2fcf7;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 32px;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0;
+    }
+
+    .step:not(:last-child) {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 16px;
+      margin-bottom: 8px;
+    }
+
+    .step-number {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-text {
+      color: #374151;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    /* CTA Button */
+    .cta-button {
+      width: 100%;
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 16px 24px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+    }
+
+    .cta-button:active {
+      transform: scale(0.98);
+    }
+
+    .cta-button svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Social Proof */
+    .social-proof {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .social-proof svg {
+      width: 16px;
+      height: 16px;
+      color: #22c55e;
+      fill: #22c55e;
+    }
+
+    .social-proof strong {
+      font-weight: 600;
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      text-align: center;
+      color: #9ca3af;
+      font-size: 12px;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Dots Background -->
+  <div class="floating-dots">
+    <div class="dot dot-1"></div>
+    <div class="dot dot-2"></div>
+    <div class="dot dot-3"></div>
+    <div class="dot dot-4"></div>
+    <div class="dot dot-5"></div>
+    <div class="dot dot-6"></div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-avatar" id="toast-avatar">JD</div>
+    <div class="toast-content">
+      <div class="toast-name" id="toast-name">John D.</div>
+      <div class="toast-message">just claimed their reward</div>
+    </div>
+    <div class="toast-time">2m ago</div>
+  </div>
+
+  <!-- Main Card -->
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1 style="color:black;">Uber</h1>
+        <p style="color:black;"><b>Eats</b></p>
+      </div>
+      <div class="card-body">
+        <div class="reward-amount">
+          <div class="amount">$750</div>
+          <div class="label">Gift Card Reward</div>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-text">Click The Button Below</div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-text">Enter Your Basic Info</div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-text">Complete Required Offers</div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-text">Claim Your Reward</div>
+          </div>
+        </div>
+
+        <a href="https://trkfy.org/aff_c?offer_id=633&aff_id=3083" class="cta-button">
+          CLAIM NOW
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+
+        <div class="social-proof">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+          <span><strong>847</strong> people claimed this today</span>
+        </div>
+      </div>
+    </div>
+    <p class="disclaimer">This is a promotional offer. Terms and conditions apply.</p>
+  </div>
+
+  <script>
+    const names = [
+      "Sarah M.", "John D.", "Emily R.", "Michael S.", "Jessica L.",
+      "David W.", "Amanda K.", "Chris P.", "Lisa T.", "Ryan H.",
+      "Michelle B.", "Kevin O.", "Ashley N.", "Brandon C.", "Nicole F."
+    ];
+
+    const toast = document.getElementById('toast');
+    const toastAvatar = document.getElementById('toast-avatar');
+    const toastName = document.getElementById('toast-name');
+
+    let currentIndex = 0;
+
+    function getInitials(name) {
+      return name.split(' ').map(n => n[0]).join('');
+    }
+
+    function showToast() {
+      const name = names[currentIndex];
+      toastName.textContent = name;
+      toastAvatar.textContent = getInitials(name);
+      
+      toast.classList.remove('hidden');
+      
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 4000);
+
+      currentIndex = (currentIndex + 1) % names.length;
+    }
+
+    // Initial show after 2 seconds
+    setTimeout(showToast, 2000);
+    
+    // Then show every 8 seconds (4s visible + 4s hidden)
+    setInterval(showToast, 8000);
+  </script>
+</body>
+</html>
