@@ -1,313 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>$750 Uber Eats Gift Card Reward</title>
-  <meta name="description" content="Claim your $750 Uber Eats gift card reward. Follow simple steps to get your reward today!">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earn up to $700 Voucher from Uber Eats | StoreScout</title>
+    <meta name="description" content="Qualify for up to $700 in Uber Eats vouchers. Available in UK, USA, CA and AU. Complete simple tasks and get rewarded!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-      background-color: #f0f0f0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-      position: relative;
-      overflow-x: hidden;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f3f1;
+            color: #2d2520;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-    /* Floating Particles */
-    .particles {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
+        /* Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -2;
+        }
 
-    .particle {
-      position: absolute;
-      border-radius: 50%;
-      background-color: #06C167;
-      opacity: 0.4;
-    }
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(245, 243, 241, 0.8);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+            z-index: -1;
+        }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
+        /* Main Container */
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 16px;
+        }
 
-    @keyframes float-delayed {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-15px); }
-    }
+        .content {
+            width: 100%;
+            max-width: 576px;
+            text-align: center;
+        }
 
-    @keyframes float-slow {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-25px); }
-    }
+        /* Typography */
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d2520;
+            margin-bottom: 8px;
+            line-height: 1.3;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
 
-    .particle-1 { top: 10%; left: 15%; width: 8px; height: 8px; animation: float 3s ease-in-out infinite; }
-    .particle-2 { top: 20%; right: 10%; width: 6px; height: 6px; animation: float-delayed 4s ease-in-out infinite 1s; }
-    .particle-3 { top: 60%; left: 8%; width: 10px; height: 10px; animation: float-slow 5s ease-in-out infinite; }
-    .particle-4 { top: 70%; right: 15%; width: 7px; height: 7px; animation: float 3s ease-in-out infinite; }
-    .particle-5 { top: 85%; left: 25%; width: 5px; height: 5px; animation: float-delayed 4s ease-in-out infinite 1s; }
-    .particle-6 { top: 40%; right: 5%; width: 8px; height: 8px; animation: float-slow 5s ease-in-out infinite; }
-    .particle-7 { top: 30%; left: 5%; width: 6px; height: 6px; animation: float 3s ease-in-out infinite; }
-    .particle-8 { top: 50%; right: 20%; width: 9px; height: 9px; animation: float-delayed 4s ease-in-out infinite 1s; }
+        .subtitle {
+            color: #7a7067;
+            font-size: 1rem;
+            margin-bottom: 28px;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out 0.1s forwards;
+        }
 
-    /* Card */
-    .card {
-      width: 100%;
-      max-width: 400px;
-      background-color: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: box-shadow 0.3s ease;
-      position: relative;
-      z-index: 10;
-    }
+        .section-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(45, 37, 32, 0.8);
+            margin-bottom: 16px;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out 0.2s forwards;
+        }
 
-    .card:hover {
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    }
+        /* Step Cards */
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
 
-    /* Header */
-    .header {
-      background-color: #06C167;
-      padding: 24px 32px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+        .step-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 24px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
 
-    .header-text {
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 24px;
-      text-align: center;
-      line-height: 1.1;
-    }
+        .step-card:nth-child(1) { animation-delay: 0.3s; }
+        .step-card:nth-child(2) { animation-delay: 0.4s; }
+        .step-card:nth-child(3) { animation-delay: 0.5s; }
+        .step-card:nth-child(4) { animation-delay: 0.6s; }
 
-    /* Content */
-    .content {
-      padding: 32px;
-    }
+        .step-card:hover {
+            box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
 
-    /* Amount */
-    .amount-section {
-      text-align: center;
-      margin-bottom: 24px;
-    }
+        .step-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ef4444;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
 
-    .amount {
-      font-size: 48px;
-      font-weight: 800;
-      color: #06C167;
-      margin-bottom: 4px;
-    }
+        .step-text {
+            color: #2d2520;
+            font-weight: 500;
+            font-size: 1rem;
+            text-align: left;
+        }
 
-    .subtitle {
-      color: #6b7280;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
+        /* CTA Button */
+        .cta-button {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 16px 32px;
+            background-color: #ef4444;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out 0.7s forwards;
+        }
 
-    /* Steps */
-    .steps-container {
-      background-color: #f2fcf7;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 24px;
-    }
+        .cta-button:hover {
+            background-color: #dc2626;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px -4px rgba(239, 68, 68, 0.4);
+        }
 
-    .step {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
+        /* Footer */
+        .footer {
+            color: #7a7067;
+            font-size: 0.875rem;
+            margin-top: 32px;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out 0.8s forwards;
+        }
 
-    .step + .step {
-      margin-top: 16px;
-    }
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    .step-number {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background-color: #06C167;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      font-weight: 600;
-      flex-shrink: 0;
-    }
+        /* Responsive */
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
 
-    .step-text {
-      color: #1f2937;
-      font-weight: 500;
-    }
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
 
-    /* Button */
-    .cta-button {
-      width: 100%;
-      height: 56px;
-      background-color: #06C167;
-      color: #ffffff;
-      border: none;
-      border-radius: 12px;
-      font-size: 18px;
-      font-weight: 700;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      animation: pulse-glow 2s ease-in-out infinite;
-    }
-
-    .cta-button:hover {
-      transform: scale(1.02);
-    }
-
-    .cta-button:hover .arrow {
-      transform: translateX(4px);
-    }
-
-    .arrow {
-      transition: transform 0.2s ease;
-    }
-
-    @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 20px rgba(6, 193, 103, 0.4); }
-      50% { box-shadow: 0 0 30px rgba(6, 193, 103, 0.6); }
-    }
-
-    /* Social Proof */
-    .social-proof {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 20px;
-      color: #6b7280;
-      font-size: 14px;
-    }
-
-    .social-proof strong {
-      color: #1f2937;
-    }
-
-    .zap-icon {
-      color: #f59e0b;
-    }
-
-    /* Disclaimer */
-    .disclaimer {
-      text-align: center;
-      color: #6b7280;
-      font-size: 12px;
-      margin-top: 24px;
-      padding: 0 16px;
-    }
-
-    .wrapper {
-      width: 100%;
-      max-width: 400px;
-    }
-  </style>
+            .step-text {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Floating Particles -->
-  <div class="particles">
-    <div class="particle particle-1"></div>
-    <div class="particle particle-2"></div>
-    <div class="particle particle-3"></div>
-    <div class="particle particle-4"></div>
-    <div class="particle particle-5"></div>
-    <div class="particle particle-6"></div>
-    <div class="particle particle-7"></div>
-    <div class="particle particle-8"></div>
-  </div>
+    <div class="background"></div>
+    <div class="background-overlay"></div>
 
-  <div class="wrapper">
-    <div class="card">
-      <!-- Header -->
-      <div class="header">
-        <div class="header-text">
-         <h4 style="color:black;">Uber</h4>
-        <p style="color:black;"><b>Eats</b></p>
+    <main class="container">
+        <div class="content">
+            <h1>Earn up to $700 Voucher from Uber Eats</h1>
+            <p class="subtitle">UK, USA, CA and AU</p>
+
+            <h2 class="section-title">How To Qualify</h2>
+
+            <div class="steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <p class="step-text">Go Through A Quick Questionnaire</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <p class="step-text">Submit Your Email And Basic Info's</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <p class="step-text">Complete 5-8 Recommended Tasks</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <p class="step-text">We'll Go Through Your Application And Email You Within 24hrs</p>
+                </div>
+            </div>
+
+            <a href="https://trkfy.org/aff_c?offer_id=1999&aff_id=3083" class="cta-button">Apply Now</a>
+
+            <p class="footer">Powered by Uber Eats</p>
         </div>
-      </div>
-
-      <!-- Content -->
-      <div class="content">
-        <!-- Amount -->
-        <div class="amount-section">
-          <div class="amount">$750</div>
-          <div class="subtitle">Gift Card Reward</div>
-        </div>
-
-        <!-- Steps -->
-        <div class="steps-container">
-          <div class="step">
-            <div class="step-number">1</div>
-            <span class="step-text">Click The Button Below</span>
-          </div>
-          <div class="step">
-            <div class="step-number">2</div>
-            <span class="step-text">Enter Your Basic Info</span>
-          </div>
-          <div class="step">
-            <div class="step-number">3</div>
-            <span class="step-text">Complete Required Offers</span>
-          </div>
-          <div class="step">
-            <div class="step-number">4</div>
-            <span class="step-text">Claim Your Reward</span>
-          </div>
-        </div>
-
-        <!-- CTA Button -->
-        <button class="cta-button" onclick="handleClaim()">
-          CLAIM NOW
-          <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </button>
-
-        <!-- Social Proof -->
-        <div class="social-proof">
-          <svg class="zap-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-          </svg>
-          <span><strong>847</strong> people claimed this today</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Disclaimer -->
-    <p class="disclaimer">This is a promotional offer. Terms and conditions apply.</p>
-  </div>
-
-  <script>
-    function handleClaim() {
-      // Add your claim logic here
-       window.location.href = "https://trkfy.org/aff_c?offer_id=633&aff_id=3083";
-    }
-  </script>
+    </main>
 </body>
 </html>
